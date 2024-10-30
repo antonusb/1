@@ -1,0 +1,96 @@
+body {
+background-color: rgb(0, 0, 0);
+}
+h1 {
+    color:white;
+    font-family: sans-serif Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: lighter;
+
+}
+.box1 {
+    background-color: black;
+}
+
+.box2 {
+    background-color: black;
+    margin-top: -50px;
+    margin-left: 165px;
+    
+}
+.box3 {
+    background-color: black;
+}
+
+.box4 {
+    background-color: black;
+    margin-left: 520px;
+}
+.first {
+    background-color: rgb(15, 13, 13);
+}
+
+img {
+    height: 50px;
+    width: 110px;
+    background-color: transparent;
+}
+
+.film {
+    height: 220px;
+    width: 150px;
+}
+.escape {
+    height: 220px;
+    width: 150px;
+}
+.green {
+    height: 220px;
+    width: 150px;
+}
+.france {
+    height: 220px;
+    width: 150px;
+}
+ 
+div {
+    background-color: rgb(29, 28, 28); 
+    height: 50px;
+}
+
+a {
+    color:rgb(2, 68, 90);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font: bold;
+    text-decoration: none;
+    
+}
+a :hover {
+    text-decoration: underline;
+    color: rgb(2, 68, 90); 
+}
+
+/* The CSS box model */
+/* 
+    Margin: empty space around element
+    Boarder: a border around element
+    Padding: empty space with background element
+
+*/
+.navigation {
+    color: white;
+    list-style: none;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0;
+    padding: 18px;
+
+}
+
+form {
+    padding-left: 1500px;
+}
+p {
+    color: rgb(9, 111, 132);
+}
