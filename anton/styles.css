@@ -1,217 +1,168 @@
 body {
-    background-color: rgb(57, 51, 51);
-    margin: 0;
-    color: white;
-    
+  background-color: rgb(57, 51, 51);
+  margin: 0;
+  color: white;
 }
 
 .container {
-    width: 75%;
-    margin: 0 auto;
-    background-color: rgb(0, 0, 0);
-    outline: 2px solid red;
-    }
+  width: 75%;
+  margin: 0 auto;
+  background-color: rgb(0, 0, 0);
+  outline: 2px solid red;
+}
 
-header{
-    display: flex;
-    align-items: center;
-    font-size: 10px;
-    height: 30px;
-    background-color: rgb(17, 16, 16);
-    margin-bottom: 0;
+header {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  background-color: rgb(17, 16, 16);
+  margin-bottom: 0;
 }
 
 a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
-}
-
-button {
-    font-size: 8px;
-
+  text-decoration: underline;
 }
 
 h1 {
-    color: white;
-}
-article {
-    margin-left: 40px;
-    
-}
-
-.hd {
-    margin-left: 32%;
-    font-size: large;
+  color: white;
 }
 
 .a2 {
-    margin-left: 255px;
+  margin-left: 255px;
 }
 
 .reg {
-    margin-left: 75px;
+  margin-left: 75px;
 }
 
 nav {
-    background-color:rgb(48, 46, 46);
-}
-
-ul {
-    /* background-color: rgb(48, 46, 46); */
-    margin-top: 0;
-    list-style: none;
-    font-size: 13px;
-    height: 30px;
-    display: flex;
-    gap: 1cm;
-    align-items: center;
-
-}
-form {
-    margin-left: 200px;
+  background-color: rgb(48, 46, 46);
 }
 
 .navi:hover {
-    text-decoration: underline;
-
+  text-decoration: underline;
 }
 .film {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 h1 {
-    margin-left: 40px;
-    font-weight: normal;
-    font-size: 35px;
+  margin-left: 40px;
+  font-weight: normal;
 }
 
 section {
-    display: flex;
-    flex-wrap: wrap;
-    width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
 }
+
 img {
-    width: 150px;
-    height: 225px;
-    margin-top: 20px;
+  width: 150px;
+  height: 225px;
+  margin-top: 20px;
 }
 
 .main {
-   color: darkcyan;
-   font-size: 12px;
+  color: darkcyan;
 }
 .main:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-p{
-    margin: 0;
-    font-size: 8px;
-    color: grey;
-    font-family: sans-serif;
+p {
+  margin: 0;
+  color: grey;
+  font-family: sans-serif;
 }
 
 hr {
-    width: 800px;
-    margin-left: 0;
-    color: rgb(64, 60, 60);
+  width: 800px;
+  margin-left: 0;
+  color: rgb(64, 60, 60);
 }
 
 .pages {
-    background-color: rgb(0, 0, 0);
-    padding-left: 200px;
-    display: flex;
-    gap: 1.5em;
-
+  background-color: rgb(0, 0, 0);
+  padding-left: 200px;
+  display: flex;
+  gap: 1.5em;
 }
 
 div {
-    font-size: 13px;
-    color: gray;
+  color: gray;
 }
 
 .end {
-    color: darkcyan;
-    margin-left: 30px;
+  color: darkcyan;
+  margin-left: 30px;
 }
 
 .hdr {
-    width: 25px;
-    height: 25px;
-    margin-top: 10px;
+  width: 25px;
+  height: 25px;
+  margin-top: 10px;
 }
 
 .hdr2 {
-    font-size: 10px;
-    color: grey;
-    margin-top: 17px;
-    margin-left: 10px;
-    
+  color: grey;
+  margin-top: 17px;
+  margin-left: 10px;
 }
 
 .bfftr {
-    width: 1000px;
-    margin-top: 30px;
-    margin-left: 30px;
-    margin-bottom: 70px; 
-    display: flex;
-    background-color: rgb(22, 22, 21);
-    
+  width: 1000px;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-bottom: 70px;
+  display: flex;
+  background-color: rgb(22, 22, 21);
 }
 
 .vk {
-    width: 1000px;
-    height: 25px;
-    font-size: 10px;
+  width: 1000px;
+  height: 25px;
 }
 
 .btm {
-    color: white;
-    width: 1000px;
+  color: white;
+  width: 1000px;
 }
 
 .foot {
-    color: white;
-    gap: 1.5cm;
-    margin-bottom: 0;
+  color: white;
+  gap: 1.5cm;
+  margin-bottom: 0;
 }
 
 .me {
-    margin-left: 70px;
+  margin-left: 70px;
 }
 
 span {
-    color: white;
-    font-size: 8px;
-    
+  color: white;
 }
 
 .ftr2 {
-    display: inline;
-    color: darkcyan;
-    font-size: 8px;
-    
+  display: inline;
+  color: darkcyan;
 }
 
 footer {
-    background-color: rgb(17, 16, 16);
+  background-color: rgb(17, 16, 16);
 }
 
 .last {
-    color: darkcyan;
-    
-    
+  color: darkcyan;
 }
 
 aside {
-    display: flex;
-    width: fit-content;
-    margin-left: 880px;
-    margin-top: 0px;
-    }
-    
-
-
+  display: flex;
+  width: fit-content;
+  margin-left: 880px;
+  margin-top: 0px;
+}

@@ -1,140 +1,174 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>My CSS experiments</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="container">
-    <header>
-      <article><a href="#">ПОДПИШИСЬ</a></article>
-      <article class="hd"><a href="#">HDREZKA</a></article>
-      <articel class="a2"><a href="#">ВХОД</a></articel>
-      <article class="reg"><a href="#">РЕГИСТРАЦИЯ</a>
-      <button>sun/dark</button></article>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>My CSS experiments</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header style="position: relative; display: flex; justify-content: space-between; padding: 1.25rem;">
+      <!-- Absolutely positioned logo! -->
+      <div style="position: absolute; left: 50%; transform: translateX(-50%);">
+        <a href="#"
+          style="background-color: red;padding: 0.25rem 0.5rem;border-radius: 0.25rem;font-size: 1.5rem;font-weight: 500;">HDREZKA</a>
+      </div>
+
+      <div style="display: flex;align-items: center;gap: 0.5rem;">
+        <div style="border-radius: 50%;width: 1rem;background-color: red; height: 1rem;"></div>
+
+        <a href="#">ПОДПИШИСЬ</a>
+      </div>
+
+
+
+      <div style="display: flex; gap: 3.25rem;">
+        <a href="#">ВХОД</a>
+
+        <div>
+          <a href="#">РЕГИСТРАЦИЯ</a>
+
+          <button>sun/dark</button>
+        </div>
     </header>
 
-      <nav>
-        <ul>
-        <li><a class="film" href="#"> <strong>Фильмы</strong></a></li>
-        <li><a class="navi" href="#"><strong>Сериалы</strong></a></li>
-        <li><a class="navi" href="#"><strong>Мультфильмы</strong></a></li>
-        <li><a class="navi" href="#"><strong>Аниме</strong></a></li>
-        <li><a class="navi" href="#">Новинки</a></li>
-        <li><a class="navi" href="#">Анонсы</a></li>
-        <li><a class="navi" href="#">Подборки</a></li>
-        <form><input type="search" placeholder="Поиск фильмов и сериалов"></form>
-       </ul>
-      </nav>
-      <h1>Лучшие фильмы</h1>
+    <nav style="display: flex;justify-content: space-between;align-items: center;padding: 0 1.25rem;">
+      <ul style="list-style-type: none;display: flex;align-items: center;gap: 1.5rem;margin-left: 0;padding-left: 0;">
+        <li><a href="#"> <strong>Фильмы</strong></a></li>
+        <li><a href="#"><strong>Сериалы</strong></a></li>
+        <li><a href="#"><strong>Мультфильмы</strong></a></li>
+        <li><a href="#"><strong>Аниме</strong></a></li>
+        <li><a href="#">Новинки</a></li>
+        <li><a href="#">Анонсы</a></li>
+        <li><a href="#">Подборки</a></li>
+      </ul>
 
-      <section>
-        
+      <form><input type="search" placeholder="Поиск фильмов и сериалов"></form>
+    </nav>
+
+    <h1>Лучшие фильмы</h1>
+
+    <section>
+
+      <li>
         <article><img src="life.jpg" alt="Human life. Last interview">
-            <p><a class="main" href="https://www.hdrezka.ag"><strong>Жизнь человека.<br> Последнее интервью</strong></p></a>
-            <p>2020, Документальные</p></article>
-          
-        <article><img src="escape.jpeg" alt="Побег из Шоушенка">
-            <p><a class="main"href="https://hdrezka.ag"><strong>Побег из Шоушенка</strong></a></p>
-            <p>1994, США, Драмы</p></article>
-
-        <article><img src="green.jpg" alt="Зеленая миля">
-           <p><a class="main"href="//hdrezka.ag"><strong>Зеленая миля</strong></a></p>
-           <p>1999, США, Драмы</p>
+          <p><a class="main" href="https://www.hdrezka.ag"><strong>Жизнь человека.<br> Последнее интервью</strong></p>
+          </a>
+          <p>2020, Документальные</p>
         </article>
+      </li>
 
-        <article><img src="france.jpg" alt="Милен Фармер">
-          <p><a class="main" href="https://hdrezka.ag"><strong>Милен Фармер</strong></a></p>
-          <p>2009, Франция, Документальные</p>
-        </article>
+      <article><img src="escape.jpeg" alt="Побег из Шоушенка">
+        <p><a class="main" href="https://hdrezka.ag"><strong>Побег из Шоушенка</strong></a></p>
+        <p>1994, США, Драмы</p>
+      </article>
 
-        <article><img src="alp.jpg" alt="History abot surviving in Alp"><p><a class="main" href="#"><strong>Убежище. Истории<br> о выживании в Альпах</a></strong></p>
+      <article><img src="green.jpg" alt="Зеленая миля">
+        <p><a class="main" href="//hdrezka.ag"><strong>Зеленая миля</strong></a></p>
+        <p>1999, США, Драмы</p>
+      </article>
+
+      <article><img src="france.jpg" alt="Милен Фармер">
+        <p><a class="main" href="https://hdrezka.ag"><strong>Милен Фармер</strong></a></p>
+        <p>2009, Франция, Документальные</p>
+      </article>
+
+      <article><img src="alp.jpg" alt="History abot surviving in Alp">
+        <p><a class="main" href="#"><strong>Убежище. Истории<br> о выживании в Альпах</a></strong></p>
         <p>2019, Франция, Документальные</p>
-        </article>
+      </article>
 
-        <article><img src="earth.jpg" alt="Earth:one awesome day"><p><a class="main" href="#"><strong>Земля: Один<br> потрясающий день</strong></a></p>
-          <p>2017, Великобритания, Документальные</p>
-         </article>
+      <article><img src="earth.jpg" alt="Earth:one awesome day">
+        <p><a class="main" href="#"><strong>Земля: Один<br> потрясающий день</strong></a></p>
+        <p>2017, Великобритания, Документальные</p>
+      </article>
 
-         <article><img src="timeless.jpg" alt="Timeless 2013"><p><a class="main" href="#"><strong>Шестой концертный тур<br>Милен Фармер</strong></a></p>
+      <article><img src="timeless.jpg" alt="Timeless 2013">
+        <p><a class="main" href="#"><strong>Шестой концертный тур<br>Милен Фармер</strong></a></p>
         <p>2013, Франция, Музыкальные</p>
-        </article>
+      </article>
 
-        <article><img src="forestgamp.jpg" alt="Forest Gamp"><p><a class="main" href="#"><strong>Форрест Гамп</strong></a></p>
-          <p> 1994, США, Драмы</p>
-        </article>
+      <article><img src="forestgamp.jpg" alt="Forest Gamp">
+        <p><a class="main" href="#"><strong>Форрест Гамп</strong></a></p>
+        <p> 1994, США, Драмы</p>
+      </article>
 
-        <article><img src="bears.jpg" alt="Bears Begining of the life"><p><a class="main" href="#"><strong>Медведи. Начало жизни</strong></a></p>
-          <p>2018,Документальные</p>
-        </article>
+      <article><img src="bears.jpg" alt="Bears Begining of the life">
+        <p><a class="main" href="#"><strong>Медведи. Начало жизни</strong></a></p>
+        <p>2018,Документальные</p>
+      </article>
 
-        <article><img src="paris.jpg" alt="Noter Dam de Paris"><p><a class="main" href="#"><strong>Собор Парижской<br> Богоматери</strong></a></p>
+      <article><img src="paris.jpg" alt="Noter Dam de Paris">
+        <p><a class="main" href="#"><strong>Собор Парижской<br> Богоматери</strong></a></p>
         <p>1998, Франция, Театр</p>
       </article>
 
-      <article><img src="armin.jpg" alt="Armin Van Buren"><p><a class="main" href="#"><strong>Концерт Армина ван<br> Бюрена в Утрехте</strong></a></p>
-      <p> 2011, Нидерланды, Документальные</p>
-    </article>
+      <article><img src="armin.jpg" alt="Armin Van Buren">
+        <p><a class="main" href="#"><strong>Концерт Армина ван<br> Бюрена в Утрехте</strong></a></p>
+        <p> 2011, Нидерланды, Документальные</p>
+      </article>
 
-    <article><img src="godfather.jpg" alt="God Father"><p><a class="main" href="#"><strong>Крестный отец:<br> Трилогия 1901-1980</strong></a></p>
-    <p>1992, США, Драмы</p>
-    </article>
-    
+      <article><img src="godfather.jpg" alt="God Father">
+        <p><a class="main" href="#"><strong>Крестный отец:<br> Трилогия 1901-1980</strong></a></p>
+        <p>1992, США, Драмы</p>
+      </article>
+
 
     </section>
     <hr>
-    
-     <section class="sctn2">
-     <ul class="pages">
-      <li><a href="page1">1</a></li>
-      <li><a href="page2">2</a></li>
-      <li><a href="page3">3</a></li>
-      <li><a href="page4">4</a></li>
-      <li><a href="page5">5</a></li>
-      <li><a href="page6">6</a></li>
-      <li><a href="page7">7</a></li>
-      <li><a href="page8">8</a></li>
-      <li><a href="page9">9</a></li>
-      <li><a href="page10">10</a></li>
-      <li>...</li>
-      <li><a href="page1418">1418</a></li>
-      <button class="next"></button>
-    </ul>
-  </section>
-  <div><a class="end" href="#">HDREZKA.ME</a> » Лучшие</div>
-  
-  <section class="bfftr">
-    <a><img class="hdr" src="hd.jpg" alt="hdrezka"></a><a class="hdr2" href="#">HDREZKA</a>
-    <hr class="btm">
-    <a class="vkf" href="#"><button class="vk">VK Follow</button></a>
-  </section>
-  <footer>
-    <ul class="foot">
-      <li><a class="last" href="#">Фильмы</a></li>
-      <li><a class="last" href="#">Мультфильмы</a></li>
-      <li><a class="last" href="#">Сериалы</a></li>
-      <li><a class="last" href="#">Передачи и шоу</a></li>
-      <li><a class="last" href="#">Правообладателям</a></li>
-      <li><a href="#">Поддержка</a></li>
-      <p class="me">© 2024 HDrezka.me</p>
-    </ul>
-   
-  <aside><button>VK</button>
-  <button>TW</button></aside>
-  <p><span>HDrezka.me — мы самый лучший онлайн кинотеатр!</span></p>
-    <p class="ftr2">Лучшие фильмы - смотреть онлайн бесплатно в хорошем качестве на HDrezka</p>
-    
-    
-    
-  </footer>
+
+    <section class="sctn2">
+      <ul class="pages">
+        <li><a href="page1">1</a></li>
+        <li><a href="page2">2</a></li>
+        <li><a href="page3">3</a></li>
+        <li><a href="page4">4</a></li>
+        <li><a href="page5">5</a></li>
+        <li><a href="page6">6</a></li>
+        <li><a href="page7">7</a></li>
+        <li><a href="page8">8</a></li>
+        <li><a href="page9">9</a></li>
+        <li><a href="page10">10</a></li>
+        <li>...</li>
+        <li><a href="page1418">1418</a></li>
+        <button class="next"></button>
+      </ul>
+    </section>
+    <div><a class="end" href="#">HDREZKA.ME</a> » Лучшие</div>
+
+    <section class="bfftr">
+      <a><img class="hdr" src="hd.jpg" alt="hdrezka"></a><a class="hdr2" href="#">HDREZKA</a>
+      <hr class="btm">
+      <a class="vkf" href="#"><button class="vk">VK Follow</button></a>
+    </section>
+    <footer>
+      <ul class="foot">
+        <li><a class="last" href="#">Фильмы</a></li>
+        <li><a class="last" href="#">Мультфильмы</a></li>
+        <li><a class="last" href="#">Сериалы</a></li>
+        <li><a class="last" href="#">Передачи и шоу</a></li>
+        <li><a class="last" href="#">Правообладателям</a></li>
+        <li><a href="#">Поддержка</a></li>
+        <p class="me">© 2024 HDrezka.me</p>
+      </ul>
+
+      <aside><button>VK</button>
+        <button>TW</button>
+      </aside>
+      <p><span>HDrezka.me — мы самый лучший онлайн кинотеатр!</span></p>
+      <p class="ftr2">Лучшие фильмы - смотреть онлайн бесплатно в хорошем качестве на HDrezka</p>
 
 
- 
-   
-</div>
-  </body>
+
+    </footer>
+
+
+
+
+  </div>
+</body>
+
 </html>
-
-
