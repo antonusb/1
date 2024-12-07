@@ -1,0 +1,850 @@
+/* How to choose :first-child or :first-of-type or :nth-child() on my table ?*/
+
+
+
+body {
+    background-color: #0d1117;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.top_header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 0rem 1rem;
+    background-color: #010409;
+    color: #9198a1;
+}
+
+.left_menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.left_menu:first-of-type p {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.right_menu {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.search_bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(128, 128, 128, 0.3);
+    padding: 0.4rem;
+    border-radius: 10px;
+    max-width: 15rem;
+}
+
+hr {
+    height: 1.25rem;
+}
+
+input {
+    background-color: #010409;
+    border: none;
+    font-size: 0.9rem;
+    width: 15rem;
+    color: #9198a1;
+}
+
+input:focus-within {
+    outline: 0;
+    caret-color: #9198a1;
+}
+
+.search_bar:focus-within {
+    border: 1px solid blue;
+}
+
+.fa-square-plus {
+    border: 1px solid rgb(128, 128, 128, 0.3);
+    border-radius: 25%;
+    padding: 0.45rem;
+}
+
+.fa-circle-dot {
+    border: 1px solid rgb(128, 128, 128, 0.3);
+    border-radius: 25%;
+    padding: 0.45rem;
+}
+
+.fa-code-pull-request {
+    border: 1px solid rgb(128, 128, 128, 0.3);
+    border-radius: 25%;
+    padding: 0.45rem;
+}
+
+.fa-inbox {
+    border: 1px solid rgb(128, 128, 128, 0.3);
+    border-radius: 25%;
+    padding: 0.45rem;
+}
+
+.fa-bars {
+    border: 1px solid rgb(128, 128, 128, 0.3);
+    border-radius: 25%;
+    padding: 0.45rem;
+}
+
+.github_icon {
+    background-color: white;
+    max-width: 2rem;
+    max-height: 2rem;
+    border-radius: 50%;
+}
+
+.my_icon {
+    max-width: 2rem;
+    max-height: auto;
+    border-radius: 50%;
+}
+
+.sub_header {
+    background-color: #010409;
+    padding: 1rem 0 0 0rem;
+}
+
+.nav_list_button {
+    display: none;
+}
+
+
+.nav_list {
+    margin: 0;
+    display: flex;
+    gap: 1.5rem;
+    padding: 0 0 0 1.5rem;
+    list-style: none;
+    font-size: 0.9rem;
+}
+
+.nav_list_links {
+    padding-bottom: 0.8rem;
+}
+
+.nav_list_links:first-child {
+    border-bottom: 2px solid rgb(255, 136, 84);
+}
+
+.nav_list_links a {
+    background-color: transparent;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 0.4rem 0.4rem 0.4rem 0.6rem;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 350;
+}
+
+.nav_list_links a:hover {
+    background-color: rgba(108, 104, 104, 0.3);
+    border-radius: 5px;
+    padding: 0.4rem 0.4rem 0.4rem 0.6rem;
+    transition: 250ms;
+}
+
+main {
+    position: relative;
+    background-color: #0d1117;
+    padding-top: 2.5rem;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0 0 0.1px rgb(255, 253, 253);
+}
+
+.container {
+    display: flex;
+    flex: 1 1 auto;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 2rem 0 2rem;
+}
+
+.user_activity {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.user_profile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: white;
+    max-width: 18.5rem;
+    margin-right: 1.5rem;
+}
+
+.user_photo {
+    overflow: hidden;
+    min-width: 18.5rem;
+    min-height: 18.5rem;
+}
+
+.user_photo img {
+    border-radius: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.fa-face-smile {
+    position: absolute;
+    display: flex;
+    align-items: end;
+    background-color: #0d1117;
+    top: 14rem;
+    left: 16rem;
+    border: 1px solid grey;
+    color: #9198a1;
+    border-radius: 50%;
+    padding: 0.6rem;
+    width: 1rem;
+    height: 1rem;
+    overflow: hidden;
+    font-size: 1rem;
+}
+
+.fa-face-smile a {
+    color: transparent;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.fa-face-smile a:hover {
+    color: blue;
+}
+
+.fa-face-smile:hover {
+    overflow: visible;
+    width: 5.5rem;
+    border-radius: 20px;
+    color: blue;
+    transition: 50ms;
+    z-index: 2;
+}
+
+.user_name {
+    margin: 0;
+    padding: 1rem 0 1rem 0;
+}
+
+h2 {
+    font-weight: 600;
+    margin: 0;
+}
+
+.user_nickname {
+    margin: 0;
+    color: #9198a1;
+    font-size: 1.2rem;
+}
+
+.user_profile_button {
+    display: flex;
+    justify-content: center;
+    background-color: #212830;
+    color: white;
+    padding: 0.4rem;
+    border: 1px solid rgb(128, 128, 128, 0.3);
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.date_time {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    max-width: 9rem;
+    padding-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.date_time p {
+    margin: 0;
+}
+
+.date_time i {
+    color: #9198a1;
+}
+
+.repositories_card {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding-bottom: 3rem;
+}
+
+.repositories_card_title {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 95%;
+}
+
+.repositories_card_title_link {
+    color: rgb(79, 143, 240);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.repositories_card_title_link:hover {
+    text-decoration: underline;
+}
+
+h4 {
+    color: white;
+    font-weight: 400;
+    margin: 0 0 0.8rem 0;
+}
+
+.repositories_card_box {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: white;
+    border: 1px solid rgb(185, 185, 186, 0.3);
+    border-radius: 7px;
+    max-width: 50%;
+}
+
+.repositories_card_box_link {
+    color: #9198a1;
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.repositories_card_box_link:first-of-type p {
+    font-size: 0.8rem;
+    border: 1px solid rgb(145, 152, 161, 0.3);
+    border-radius: 10px;
+    padding: 0.1rem 0.3rem 0.1rem 0.3rem;
+    margin: 0;
+}
+
+.repositories_card_box_link a {
+    color: rgb(79, 143, 240);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.repositories_card_box_text {
+    color: #9198a1;
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding-left: 1rem;
+}
+
+.repositories_card_box_text::before {
+    content: '';
+    display: inline-block;
+    width: 0.65rem;
+    height: 0.65rem;
+    border-radius: 50%;
+    background-color: rgb(255, 115, 0);
+    margin-right: 0.1rem;
+}
+
+.contributions_card {
+    position: relative;
+    z-index: 1;
+    max-width: 80%;
+    min-width: 0;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.check_sticky {
+    display: flex;
+    flex: 1 1 auto;
+
+}
+
+.calendar {
+    position: sticky;
+    top: 5rem;
+    display: flex;
+    flex: 1 1 auto;
+    z-index: 0;
+    height:fit-content;
+    width: fit-content;
+    padding-left: 2rem;
+}
+
+.calendar a {
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    background-color: rgb(14, 103, 237);
+    padding: 0.5rem 4rem 0.5rem 0.5rem;
+}
+
+.contributions_card_title {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    align-items: baseline;
+    max-width: 98%;
+}
+
+
+.contributions_card_link {
+    color: #9198a1;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.contributions_card_link:hover {
+    color: rgb(79, 143, 240);
+    text-decoration: underline;
+}
+
+.contributions_card_table {
+    border: 1px solid rgb(145, 152, 161, 0.3);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin: 0;
+    max-width: 100%;
+    color: white;
+    font-size: 0.6rem;
+    font-weight: 100;
+}
+
+table {
+    display: flex;
+    flex-direction: column;
+}
+
+td {
+    position: relative;
+    width: 0.6rem;
+    height: 0.6rem; 
+    background-color:#161b22;
+    border-radius: 3px;
+}
+
+td p {
+    position: absolute;
+    z-index: 1;
+    top: 0.3rem;
+    right: -5rem;
+    background-color: #58595a;
+    width: 9rem;
+    padding: 0.4rem;
+    border-radius: 7px;
+    display: none;
+}
+
+td:hover p {
+    display: block;
+}
+
+.contribution_table_link {
+    color: transparent;
+}
+
+
+th {
+    padding: 0;
+}
+
+tr {
+    height: 0.6rem;
+}
+
+.table_column {
+    text-align: left;
+    width: 3.5rem;
+}
+
+.contributions_card_table_link {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem 1rem 1rem;
+}
+
+.contributions_card_table_link a:first-child {
+    color:#9198a1;
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+
+.contributions_card_table_link a:hover {
+    color: rgb(79, 143, 240);
+}
+
+.contributions_card_table_text {
+    display: flex;
+    align-items: center;
+    color: #9198a1;
+    gap: 0.2rem;
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+
+.contributions_card_table_text p {
+    margin: 0;
+}
+
+.boxes1 {
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color:#161b22;
+    border-radius: 3px;
+}
+
+.boxes2 {
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color:#0e4429;
+    border-radius: 3px;
+}
+
+.boxes3 {
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: #006d32;
+    border-radius: 3px;
+}
+
+.boxes4 {
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: #26a641;
+    border-radius: 3px;
+}
+
+.boxes5 {
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: #39d353;
+    border-radius: 3px;
+}
+
+.contribution_activity_card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    max-width: 100%;
+    min-width: 0;
+    padding-top: 2rem;
+}
+
+.contribution_activity_title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contribution_year {
+    display: none;
+    color: #9198a1;
+    font-size: 0.9rem;
+    border: 1px solid rgb(145, 152, 161, 0.3);
+    border-radius: 5px;
+    padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+    margin: 0;
+
+}
+
+.contribution_year time {
+    color: white;
+}
+
+h3 {
+    color: white;
+    font-weight: 300;
+    font-size:medium;
+    margin: 0;
+    
+}
+
+.contribution_date {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+
+.contribution_date time {
+    color:#9198a1;
+}
+
+.contribution_date::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(185, 185, 186, 0.3);
+    margin-left: 1rem;
+}
+
+.repositorie_changes_card {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    border-left: 1px solid rgb(185, 185, 186, 0.3);
+    color: white;
+    margin-left: 1rem;
+    max-width: 95%;
+    min-width: 0;
+}
+
+.fa-floppy-disk {
+    position: absolute;
+    top: 0.6rem;
+    left: -0.8rem;
+    background-color: rgb(42, 42, 42);
+    border-radius: 50%;
+    padding: 0.4rem;
+    color: #9198a1;
+}
+
+.repositorie_changes_commits {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    padding: 1rem 0 0 1.2rem;
+}
+
+.repositorie_commit_button {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 1rem;
+    width: 100%;
+    text-align: start
+}
+
+.fa-arrow-down-up-across-line {
+    font-size: 0.8rem;
+}
+
+button:hover {
+    color: rgb(79, 143, 240);
+}
+
+.repositorie_changes_commits_link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    padding: 0.5rem 0 0.5rem 1.6rem;
+}
+
+.repositorie_changes_name a:first-child {
+    color:rgb(79, 143, 240);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.repositorie_changes_name a:first-child:hover {
+    text-decoration: underline;
+}
+
+.repositorie_changes_name a:nth-child(2) {
+    color: #9198a1;
+    text-decoration: none;
+    font-size: 0.7rem;
+}
+
+.repositorie_changes_name a:nth-child(2):hover {
+    text-decoration: underline;
+}
+
+.line {
+    width: 8rem;
+    height: 0.4rem;
+    border-radius: 5px;
+    background-color: #26a641;
+}
+
+.repositorie_activity_button {
+    display: flex;
+    justify-content: center;
+    color: rgb(79, 143, 240);
+    background-color: #0d1117;
+    width: 100%;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border: 1px solid rgb(145, 152, 161, 0.3);
+    border-radius: 5px;
+    padding: 0.7rem;
+    margin-top: 1rem;
+}
+
+.repositorie_activity_button:hover {
+    background-color: rgb(38, 38, 39,0.4);
+}
+
+.github_profile_guide {
+    color: #9198a1;
+    font-size: 0.7rem;
+    padding-top: 1rem;
+}
+
+.github_profile_guide a {
+    color: rgb(79, 143, 240);
+    font-size: 0.7rem;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    color: #9198a1;
+    font-size: 0.8rem;
+    padding-top: 5rem;
+
+}
+
+.footer_footer {
+    max-width: 80rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.footer_footer_icon {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.footer_logo {
+    background-color: #9198a1;
+    border-radius: 50%;
+    padding: 0.1rem;
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+
+
+.footer_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    text-align: center;
+    padding-left: 1rem;
+}
+
+.footer_links {
+    color: #9198a1;
+    text-decoration: none;
+}
+
+.footer_links:hover {
+    color: rgb(79, 143, 240);
+    text-decoration: underline;
+}
+
+@media(max-width:1270px) {
+    .contributions_card_table {overflow-x: scroll; scrollbar-color: grey darkgrey;}
+}
+
+@media(max-width:1012px) {
+    .contribution_year {display: block;}
+    .calendar {display: none;}
+    .repositories_card_title {max-width: 100%;}
+    .contributions_card  {max-width: 100%;}
+    .check_sticky {max-width: 100%;}
+    .user_profile {max-width: 16rem;} 
+    .user_photo {min-width: 16rem; min-height: 16rem;}
+    .fa-face-smile {top: 12rem; left: 14rem;}
+    .container {padding:1rem}
+    input {width:1rem; }
+    .search_bar {width: 1rem; overflow: hidden;}
+    input:focus-within {width: 15rem;}
+    .search_bar:focus-within {width:15rem;}
+    main {padding-top: 1.25rem;}
+    .footer_footer {flex-direction: column; flex-flow: column-reverse; }
+    footer {padding-top: 2.5rem;}
+    .footer_list {margin-bottom: 0;}
+}
+
+@media(max-width: 768px){
+    .right_menu i:nth-child(3) {display: none;}
+    .right_menu i:nth-child(4) {display: none;}
+    .right_menu i:nth-child(5) {display: none;}
+    .right_menu hr {display: none;}
+    .container {flex-direction: column;}
+    .user_profile {max-width: 100%; margin-right: 0;}
+    .user_photo {min-width: 0rem; min-height: fit-content;}
+    .user_photo img {max-width: 7.5rem; max-height: auto;}
+    .user_profile_name {display:flex;  align-items: center; gap: 1rem;}
+    .user_name {max-width: fit-content;}
+    .user_profile_time, .time_zone {display: none;}
+    .user_profile_button {margin-top:3.5rem; max-width: 100%; border-radius: 5px;}
+    .user_profile_button:hover {color: white; background-color: rgba(234, 234, 234, 0.1) ;}
+    .fa-face-smile {box-sizing: border-box; width: 100%; height: 2rem;border-color:rgb(128, 128, 128, 0.3); border-radius:8px; padding: 0.4rem;top: 9rem; left: 0;}
+    .fa-face-smile a {color:#9198a1; font-size: 0.7rem;}
+    .fa-face-smile:hover {color:rgb(79, 143, 240); width:98%; border-radius: 8px;}
+    .fa-face-smile a:hover {color:rgb(79, 143, 240);}
+    .user_activity {margin-top: 3.5rem;}
+    .repositories_card_box {max-width: 100%;}
+}
+
+@media (max-width: 616px) {
+    .navigation {display: flex; align-items: baseline; justify-content: space-between; padding-right: 1rem; } 
+    .nav_list_link_5 {display: none;}
+    .nav_list_button {display: block; border: 1px solid rgb(145, 152, 161, 0.3); background-color:#212830; color: #9198a1; border-radius: 8px; padding: 0.5rem;}
+}
+
+@media (max-width: 561px) {
+    .nav_list_link_4 {display: none;}
+}
+
+@media (max-width: 480px) {
+    .nav_list_link_3 {display: none;}
+}
+
+@media (max-width: 376px) {
+    .nav_list_link_2 {display: none;}
+    .nav_list {max-width: 5rem;}
+}
+
+@media (max-width: 330px) {
+    .user_profile_button {margin-top: 4.2rem;}
+}
