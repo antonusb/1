@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es5", // Specifies the JavaScript version to compile to
+    "module": "commonjs", // Specifies module code generation (CommonJS, ES Module, etc.)
+    "lib": ["es6", "dom"], // Specifies what types of libraries to include
+    "strict": true, // Enables all strict type-checking options
+    "noImplicitAny": true, // Raises error on expressions and declarations with an implied `any`
+    "outDir": "javascript", // Specifies the output directory for compiled files
+    "rootDir": "./", // Specifies the root folder for input files
+    "sourceMap": true, // Generates corresponding `.map` file for source code
+    "esModuleInterop": true, // Enables support for `import` and `export` statements
+    "forceConsistentCasingInFileNames": true, // Ensures consistent casing for filenames and imports
+    "noEmitOnError": true,
+    "removeComments": false,
+    "alwaysStrict": true,
+    "allowUnreachableCode": false
+  }
+}
